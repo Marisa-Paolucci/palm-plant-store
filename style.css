@@ -1,0 +1,514 @@
+/*Fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+/* Base */
+
+:root {
+    --clr-text: #121213;
+    --clr-primary: #BFD8BD;
+    --clr-accent: #f7faf6;
+    --clr-form: #D1DBC2;
+    --clr-button: #36453b;
+
+    --ff-serif: 'Josefin Sans', sans-serif;
+    --ff-items: 'Caveat', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: var(--ff-serif);
+    color: var(--clr-text);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    letter-spacing: .12rem;
+    word-spacing: .16rem;
+}
+
+body {
+    margin: 0;
+}
+
+p + p {
+    margin-top: 2rem;
+}
+
+ul {
+    list-style: none
+}
+
+a {
+   text-decoration: none;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: var(--clr-form);
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    padding: 1.75em 1em;
+}
+   
+/* Navigation */
+
+#navbar {
+    box-shadow: 2px 2px 8px -6px #3c3e50;
+    background-color: var(--clr-button);
+}
+
+#mobileMenuTrigger {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#mobileMenuTrigger div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+.nav-logo-container {
+    /* border: solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25em 1.875em;
+}
+
+.nav-links {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--ff-serif);
+    display:flex;
+    flex-direction: column;
+    gap: 1.875em;
+    margin: 1em 0 2em;
+}
+
+.nav-links li {
+    border-bottom: 1px solid rgba(73, 80, 160, 0.123);
+    padding: .625em 0 2.5em;
+}
+
+.nav-links-container {
+    /* border: solid; */
+    max-height: 0px;
+    overflow-y: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    bottom: -0.313rem;
+    left: 0;
+    height: 0.125rem;
+    width: 0;
+    background: white;
+    transition: width 0.5s ease;
+}
+
+.nav-links li a:hover::before {
+    width: 4rem;
+}
+
+/* Hamburger Animation */
+
+.active {
+    max-height: 2000px;
+}
+
+.active .line1 {
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.active .line2 {
+    opacity: 0;
+}
+
+.active .line3 {
+    transform: rotate(45deg) translate(-5.2px, -4px);
+}
+
+/* Skip to Main button for keyboard users */
+
+.skip-link {
+    left: -100%;
+    position: absolute;
+}
+
+.skip-link:focus {
+    left: 50%;
+}
+
+/* Hero Image and Container */
+
+.hero {
+    background-color: #68706a;
+    background-image: url("images/palm-banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-size: 2.10rem;
+    padding: 15vh .5em;
+    text-align: center;
+}
+
+/*Intro*/
+
+.intro {
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: var(--clr-accent);
+}
+
+h2 {
+    font-family: var(--ff-items);
+}
+
+/*Shop Items*/
+
+.shopContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1em;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+h3 {
+    font-family: var(--ff-items);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.item {
+    overflow: hidden;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    max-width: 30rem;
+}
+
+.item-description {
+    padding-bottom: 1.8em;
+}
+
+.accordion-button {
+    display: block;
+    width: 100%;
+    padding: 0.938em;
+    border: none;
+    /*outline: none;*/
+    cursor: pointer;
+    background: var(--clr-button);
+    color: white;
+    font-size: 1rem;
+    font-family: var(--ff-serif);
+    text-align: left;    
+}
+
+.accordion-button::after {
+    content: '\25be';
+    float: right;
+    transform: scale(1.5);
+}
+
+.accordion-button--active {
+    background: #496151;
+}
+
+.accordion-button--active::after {
+    content: '\25b4'
+}
+
+.accordion-button:focus-visible {
+    outline-color: #af4242;
+    outline-width: 1rem;
+}
+
+.accordion-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s;
+    padding: 0 .938em;
+    background-color: var(--clr-accent);
+}
+
+.list {
+    list-style: disc;
+}
+
+/*Customer Comments*/
+
+.comments-picture {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1em;
+    background-color: var(--clr-accent);
+}
+
+.comment-title {
+    font-family: var(--ff-items);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.customer-comments {
+    text-align: center;
+}
+
+.comment-name {
+    text-align: right;
+    font-size: 1rem;
+    margin-top: .75rem;
+    margin-bottom: 3rem;
+}
+    
+.plant-aisle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+/*Contact Form*/
+
+.image-contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1em;
+    background-color: var(--clr-form);
+}
+
+.contact-message {
+   margin-bottom: 2em;
+}
+
+.contact-title {
+    font-family: var(--ff-items);
+    font-size: 2rem;
+    text-align: left;
+}
+
+.form__label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 550;
+}
+
+.form__text {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    margin: .25em 0 2em;
+}
+
+.submit-button {
+    cursor: pointer;
+    display: inline-block;
+    background: var(--clr-button);
+    color: white;
+    padding: 1em 2em;
+    font-family: var(--clr-text);
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: .12rem; 
+}
+
+.submit-button:hover {
+    background: #af4242;
+}
+
+.submit-button:focus-visible {
+    outline-color: #af4242;
+    outline-width: 2em;
+}
+
+input {
+    border-color: #17201a;
+    border-radius: .5em;
+    margin-bottom: 1em;
+}
+
+input,
+textarea:focus-visible {
+    outline-color: #af4242;
+}
+
+textarea {
+    border-color: #17201a;
+    padding: 2em;
+    min-height: 12em;
+    resize: none;
+}
+
+.error{
+    color: #b13b2c;
+    background-color: #feeff1;
+    padding: .625em;
+    display: none;
+}
+
+.error.display-error {
+    display: block;
+    margin-bottom: 1.25em;
+    transform: translateY(-1.25em);
+}
+
+/* Footer */
+
+.footer-container {
+    background-color: var(--clr-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3em 1em;
+}
+
+.footer-content {
+    font-size: 1.25rem;
+    color: var(--clr-text);
+    text-align: center;
+    font-weight: 600;
+}
+
+.footer-social {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-link {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.social-icon {
+    max-width: 60px;
+}
+
+.social-icon:hover {
+    background-color: #af4242;
+}
+
+@media only screen and (min-width: 875px) {
+    section {
+        padding: 2em 1em;
+    }
+    
+    .nav-logo-container {
+        justify-content: center;
+        padding: 1.563em 0 0;
+    }
+    
+    #mobileMenuTrigger {
+        display: none;
+    }
+
+    .nav-links-container {
+        max-height: none;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        margin: 1.125em 0 1.25em;
+    }
+
+    .nav-links li {
+        border: none;
+        padding: 0;
+    }
+
+    .shopContainer {
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
+    .comments-picture {
+        flex-direction: row;
+    }
+
+    .customer-comments {
+        padding: 3em;
+    }
+
+    .plant-aisle {
+        margin: 7em 0 7em 0;
+    }
+
+    .contact-form {
+        padding: 4em;
+    }
+
+    .succulents {
+        margin-top: 7em;
+    }
+
+    .image-contact-form {
+        flex-direction: row;
+    }
+}
+
+
+
+@media screen and (min-width: 1025px) {
+    #navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.25em 2.5em;
+        margin: auto;
+    }
+
+    .nav-logo-container {
+        padding: 0;
+    }
+
+    .nav-links-container {
+        display: flex;
+        width: 100%;
+    }
+
+    .nav-links {
+        /* border: solid; */
+        align-items: center;
+        flex: 1;
+    }
+
+    .nav-links li a {
+        position: relative;
+    }
+
+    .customer-comments {
+        padding: 3em;
+        margin: 3em 10em 0 6em;
+        flex: 0 1 50%;
+        font-size: 1.25rem;
+}
+
+}

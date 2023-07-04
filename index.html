@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="At Palm, we know that home is where your plants are. Visit our shop to see our wide variety of plants, and to taste our delicious coffee">
+        <title>Palm Plant Shop</title>
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <nav id="navbar">
+                <a class="skip-link" href="#main">Skip to main</a>
+                <div class="nav-logo-container">
+                    <a href="index.html" class="nav-logo"><img src="./images/Palm-1.png" alt="Palm Plant Shop Logo" height="84" width="90"></a>
+                        <button id="mobileMenuTrigger" 
+                                aria-expanded="false"
+                                aria-controls="navigationLinks"
+                                title="Open and Close Navigation">
+
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>      
+                        </button>
+                </div>
+            
+                <div id="navigationLinks" class="nav-links-container">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#plants">Plants</a></li>
+                        <li><a href="#coffee">Coffee</a></li>
+                        <li><a href="#workshops">Workshops</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>     
+                </div>
+            </nav>
+
+        </header>
+
+        <main id="main" class="main" tabindex="-1">
+
+            <section class="hero">
+                <div class="container">
+                    <h1>Home is where your plants are.</h1>
+                </div>
+            </section>
+        
+            <section class="intro">
+                <h2 class="section-title">Welcome to Palm</h2>
+                    <p>
+                        Find your perfect plant, stop by our coffee bar, or take a workshop.
+                    </p>
+            </section>
+
+            <section class="shopContainer">
+                    <div class="item">
+                            <img src="./images/plants3.jpg" alt="plants and planters" />
+                            <h3 id="plants">Plants</h3>
+                            <p class="item-description">
+                                We carry a large variety of houseplants and planters. We can help you find the best plant to match your lifestyle and home.
+                            </p>
+                            <button type="button" class="accordion-button">Our plants</button>
+                            <div class="accordion-content">
+                                <ul class="list">
+                                    <li>Fiddle Leaf Fig</li>
+                                    <li>Peace Lily</li>
+                                    <li>Rubber Plant</li>
+                                    <li>Aglaonema</li>
+                                    <li>Monstera</li>
+                                    <li>Snake Plant</li>
+                                    <li>Succulents</li>
+                                    <li>Cactus</li>
+                                    <li>Pothos</li>
+                                    <li>Majesty Palm</li>
+                                </ul>     
+                            </div>
+                    </div>
+
+                    <div class="item">
+                            <img src="./images/coffeebar.jpg" alt="coffee bar" />
+                            <h3 id="coffee">Coffee</h3>
+                            <p>
+                                Our coffee bar serves the best locally roasted micro-batch coffee, tea, and house-made specialty drinks. Pair your coffee with a freshly baked pastry.
+                            </p>
+                            <button type="button" class="accordion-button">Coffee Menu</button>
+                            <div class="accordion-content">
+                                <ul class="list">
+                                    <li>Brewed Coffee</li>
+                                    <li>Americano</li>
+                                    <li>Latte</li>
+                                    <li>Mocha</li>
+                                    <li>Cappuccino</li>
+                                    <li>Cortado</li>
+                                    <li>Macchiato</li>
+                                    <li>Espresso</li>
+                                    <li>Pastries</li>
+                                    <li>Hammy Sammy</li>
+                                    <li>Croissants</li>
+                                </ul>     
+                            </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="./images/plantclass.jpg" alt="a terrarium building workshop" />
+                        <h3 id="workshops">Workshops</h3>
+                        <p>
+                            We offer various workshops throughout the year, including a succulent terrarium workshop and a houseplant 101 workshop. Contact us if you are interested in a workshop.
+                        </p>
+                        <button type="button" class="accordion-button">Workshops</button>
+                            <div class="accordion-content">
+                                <ul class="list">
+                                    <li>Houseplant 101 Workshop - 3/23/2023 at 11am</li>
+                                    <li>Succulent Terrarium Workshop - 4/6/2023 at 11am</li>
+                                </ul>     
+                            </div>
+                    </div>
+                
+            </section>
+
+            <section class="comments-picture">
+                <div class="customer-comments">
+                    <h4 class="comment-title">Comments from our customers:</h4>
+                    <p>"The staff at Palm were so helpful. They helped me find the perfect plant for my friend's new home. Also, the coffee and cream pastry were delicious."</p>
+                    <p class="comment-name">-Liana M.</p>
+                    <p>"We did the succulent terrarium workshop for my sister's bridal shower. A beautiful space, delicious pastries, and so much fun. Theresa was a great instructor."</p>
+                    <p class="comment-name">-Alice B.</p>
+                </div>
+                <div>
+                    <img src="./images/plants2.jpg" class="plant-aisle" alt="woman walking through plant aisle" />
+                </div>
+            </section>
+
+            <section class="image-contact-form">
+                <div>
+                    <img src="./images/succulents.jpg" class="succulents" alt="a variety of succulents" />
+                </div>
+                <div class="contact-form" id="contact">
+                    <h4 class="contact-title">Contact us:</h4>
+                    <p class="contact-message">If you have any questions about our services, please fill out the form below.</p>
+                    
+                    <form name="contact-us" action="" method="POST" novalidate>
+
+                        <div id="errors" aria-live="assertive" tabindex="-1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form__label" for="name">Your name (required):</label>
+                            <input class="form__text" id="name" type="text" name="name" required>
+                            <p class="error name-error"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form__label" for="email">Your email (required):</label>
+                            <input class="form__text" id="email" type="email" name="email" required>
+                            <p class="error email-error"></p>
+                        </div>
+    
+                        <div class="form-group">
+                            <label class="form__label" for="message">Your message (required):</label>
+                            <textarea class="form__text" id="message" name="message" required></textarea>
+                            <p class="error message-error"></p>
+                        </div>
+
+                        <button class="submit-button">Submit</button>
+
+                    </form>
+                </div>
+            </section>
+        
+        </main>
+        <footer>
+            <section class="footer-container">
+            <div class="footer-content">
+                    <address>
+                        Palm<br>
+                        123 Monstera Ct.<br>
+                        Walton, KY 41094<br>
+                        859-123-4567
+                    </address>
+                </div>
+
+                <ul class="footer-social">
+                    <li>
+                        <a class="social-link" href="https://facebook.com" title="Visit Facebook Page" target="_blank" rel="noopener" role="img">
+                            <img class="social-icon" src="images/facebook-logo.png" aria-label="facebook" />
+                        </a>
+                        <a class="social-link" href="https://instagram.com" title="Visit Instagram Page" target="_blank" rel="noopener" role="img">
+                            <img class="social-icon" src="images/instagram-logo.png" aria-label="instagram" />
+                        </a>
+                        <a href="index.html" class="nav-logo"><img src="images/Palm-1.png" alt="Palm Plant Shop Logo" height="84" width="90"></a>
+                    </li>
+                </ul>
+            </section>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
