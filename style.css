@@ -9,6 +9,8 @@
     --clr-text: #121213;
     --clr-primary: #BFD8BD;
     --clr-accent: #f7faf6;
+    --clr-countdown: #024d1b;
+
     --clr-form: #D1DBC2;
     --clr-button: #36453b;
 
@@ -260,6 +262,69 @@ h3 {
     list-style: disc;
 }
 
+/* Divider Image and Container */
+
+.divider {
+    background-color: #68706a;
+    background-image: url("images/palm-banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 8vh .5em;
+    text-align: center;
+}
+
+/*Anniversary Announcement*/
+
+.anniversary-picture {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1em;
+    background-color: var(--clr-accent);
+}
+
+.announcement-title {
+    font-family: var(--ff-items);
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.anniversary-announcement {
+    text-align: center;
+}
+
+/*Countdown Clock*/
+
+.countdown-title {
+    font-family: var(--ff-items);
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.countdown-clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-clock div {
+    flex-basis: 6.25em;
+    margin-top: -3.5em;
+}
+
+.countdown-clock div p {
+    font-size: 3rem;
+    color: var(--clr-countdown);
+    margin-bottom: -0.08em;
+}
+    
+.sparklers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
 /*Customer Comments*/
 
 .comments-picture {
@@ -450,6 +515,18 @@ textarea {
         align-content: space-around;
     }
 
+    .anniversary-picture {
+        flex-direction: row;
+    }
+
+    .anniversary-announcement {
+        padding: 3em;
+    }
+
+    .sparklers {
+        margin: 7em 0 7em 0;
+    }
+
     .comments-picture {
         flex-direction: row;
     }
@@ -503,6 +580,13 @@ textarea {
     .nav-links li a {
         position: relative;
     }
+
+    .anniversary-announcement {
+        padding: 3em;
+        margin: 3em 10em 0 6em;
+        flex: 0 1 50%;
+        font-size: 1.3rem;
+}
 
     .customer-comments {
         padding: 3em;
