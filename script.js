@@ -62,6 +62,25 @@ var x = setInterval(function(){
 
 },1000);
 
+//Converter
+
+const inputs = document.querySelectorAll(".converter-container input");
+const f = document.querySelector("#candle");
+const l = document.querySelector("#lux")
+
+inputs.forEach(input => {
+   input.addEventListener("input", e => {
+      const unit = e.target.id;
+      const v = parseInt(e.target.value);
+      if(unit === "candle") {
+         l.value = parseFloat(v * 10.764).toFixed(4) * 1;  
+      }
+      else if(unit === "lux") {
+         f.value = parseFloat(v / 10.764).toFixed(4) *1;
+      }
+   })
+});
+
 //Contact Form Error Messages
 
 function showError(errorElement, errorMessage){

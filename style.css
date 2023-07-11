@@ -280,7 +280,7 @@ h3 {
     display: flex;
     flex-direction: column;
     padding: 2em 1em;
-    background-color: var(--clr-accent);
+    background-color: var(--clr-form);
 }
 
 .announcement-title {
@@ -357,6 +357,82 @@ h3 {
     align-items: center;
     margin-top: 2em;
 }
+
+/*Light Meter*/
+
+.light-meter {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1em;
+    background-color: var(--clr-form);
+}
+
+.lighting-title {
+    font-family: var(--ff-items);
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.lighting-info {
+    text-align: center;
+}
+
+.succulents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+/*Converter*/
+
+.converter {
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    margin: auto;
+    padding: .75em;
+    max-width: 40rem;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-radius: .5em;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.converter-container {
+    width: 45%;
+    display: inline-block;
+}
+
+.converter-label {
+    display: inline-block;
+}
+
+.converter-container2 {
+    padding: .313em .625em;
+    margin: auto;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: center;
+    display: inline-block;
+    
+}
+
+input {
+    width: 100%;
+    height: 3em;
+    border-radius: .313em;
+    border: .125em solid #d2d2d2;
+    outline: none;
+    margin-top: .5em;
+    padding: 0 .625em;
+}
+
+input:focus {
+    border-color: #af4242;
+}
+
 
 /*Contact Form*/
 
@@ -539,12 +615,20 @@ textarea {
         margin: 7em 0 7em 0;
     }
 
-    .contact-form {
-        padding: 4em;
+    .light-meter {
+        flex-direction: row;
+    }
+
+    .lighting-info {
+        padding: 3em;
     }
 
     .succulents {
-        margin-top: 7em;
+        margin: 7em 0 7em 0;
+    }
+
+    .contact-form {
+        padding: 4em;
     }
 
     .image-contact-form {
@@ -593,6 +677,13 @@ textarea {
         margin: 3em 10em 0 6em;
         flex: 0 1 50%;
         font-size: 1.25rem;
+}
+
+    .lighting-info {
+        padding: 3em;
+        margin: 3em 10em 0 6em;
+        flex: 0 1 50%;
+        font-size: 1.3rem;
 }
 
 }
