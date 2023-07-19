@@ -14,4 +14,4 @@ This is my final project for Code Kentucky's Web Dev 2 course. It is a website f
 
   4. Data from a third-party API (Quotable API) was retrieved, and the website displays random quotes.
         * The quotes will populate every time the pages is loaded. In addition, the user can click on a "New Quote" button to retrieve additional quotes. 
-        * Per my project plan, I was going to include a plant search bar that would retrieve data from a houseplant API. Unfortunately, I had issues with free version of the API and chose not to use it. 
+        * Per my project plan, I was going to include a plant search bar that would retrieve data from a houseplant API. Unfortunately, I had issues with the free version of the API and chose not to use it. 
