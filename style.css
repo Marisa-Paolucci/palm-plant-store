@@ -7,7 +7,7 @@
 
 :root {
     --clr-text: #121213;
-    --clr-primary: #BFD8BD;
+    --clr-primary: #7a8d79;
     --clr-accent: #f7faf6;
     --clr-countdown: #024d1b;
 
@@ -448,7 +448,7 @@ input:focus {
 .quote-generator {
     width: 100%;
     background-color: #36453b;
-    padding: 50px 40px;
+    padding: 60px 50px;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
     position: relative;
     border-radius: 5px;

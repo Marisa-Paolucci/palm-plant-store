@@ -1,27 +1,17 @@
-# Palm-plant-store
+![Alt text](images/smallpottedplant.jpg)
 
-This is my final project for Code Kentucky's Web Dev 2 course. It is a website for a fictional plant store named Palm. Per project requirements, it contains HTML, CSS, JavaScript, Flexbox, media queries, and accessible features. 
+# Palm Plant Store
+
+This is my final project for Code Kentucky's Web Dev 2 course. It is a website for a fictional houseplant store named Palm. Per project requirements, it is a mobile-first, responsive website containing HTML, CSS, Javascript, and an integrated third-party API.
 
 ## Additional Features:
-  1. An accessible responsive menu:
-      * The mobile menu has aria attributes for the toggle element
-      * The navigation can be opened with a keyboard
-      * A screen reader can be used for navigation
-      * The menu is responsive for mobile, tablet, and desktop
+  1. A regular expression was used to validate user input and informs the user about it:
+      * The email form will alert the user if an email address is valid or invalid. Also, if the user attempts to submit the form without entering an email address, an error message will alert the user.
 
-  2. A page speed was ran using pagespeed.web.dev and a score of 95 for mobile and 99 for desktop was    achieved.
+  2. A light measurement converter converts a users input between foot candles and lux.
 
-  3. Per my project plan, I was going to use accessibilitychecker.org to run an accessibility check on my site. Per this accessibility checker, a compliant score of 85 was achieved. However, it listed a number of items that were not applicable to my site. Therefore, I used pagespeed.web.dev and accessibe.com instead. Per pagespeed.web.dev, my site achieved an accessibility score of 98 for mobile and 100 for desktop. Per accessibe.com, my site is listed as WCAG 2.1 level AA compliant. The following is a list of accessible features added to my site:
-      * Accessible navigation with aria attributes
-      * Skip to Main button for keyboard users
-      * WCAG 2.1 line-spacing, font-size, and line-height
-      * Alt descriptions for images
-      * Per accessibility checker recommendations, "required" was added to contact form labels, and font/background colors were adjusted using a contrast checker.
+  3. A countdown clock calculates the days, hours, minutes, and seconds until the store's anniversary party. Once the clock reaches the date of the party, the clock will show all zeros. 
 
-  4. The following CSS/JavaScript animations/arrays were added:
-      * Hover animation on desktop menu
-      * Hamburger animation on mobile menu
-      * A Skip to Main link for keyboard users that appears when using the tab key and disappears once it  is used
-      * Accordions for shop items with color and toggle transitions
-      * Contact form shows error messages if fields are left blank
-
+  4. Data from a third-party API (Quotable API) was retrieved, and the website displays random quotes.
+        * The quotes will populate every time the pages is loaded. In addition, the user can click on a "New Quote" button to retrieve additional quotes. 
+        * Per my project plan, I was going to include a plant search bar that would retrieve data from a houseplant API. Unfortunately, I had issues with free version of the API and chose not to use it. 

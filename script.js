@@ -124,7 +124,6 @@ function checker(){
 
 }
 
-
 //Contact Form Error Messages
 
 function showError(errorElement, errorMessage){
