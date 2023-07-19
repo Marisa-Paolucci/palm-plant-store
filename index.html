@@ -114,8 +114,8 @@
                         <button type="button" class="accordion-button">Workshops</button>
                             <div class="accordion-content">
                                 <ul class="list">
-                                    <li>Houseplant 101 Workshop - 3/23/2023 at 11am</li>
-                                    <li>Succulent Terrarium Workshop - 4/6/2023 at 11am</li>
+                                    <li>Houseplant 101 Workshop - 8/17/2023 at 11am</li>
+                                    <li>Succulent Terrarium Workshop - 9/21/2023 at 11am</li>
                                 </ul>     
                             </div>
                     </div>
@@ -167,6 +167,8 @@
                 </div>
             </section>
 
+            <section class="divider"></section>
+
             <section class="light-meter">
                 <div>
                     <img src="./images/succulents.jpg" class="succulents" alt="a variety of succulents" />
@@ -191,35 +193,43 @@
                 </div>
             </section>
 
-            <section class="image-contact-form">
-                <div>
-                    <img src="./images/succulents.jpg" class="succulents" alt="a variety of succulents" />
+            <section class="quotes">
+                <div class="quote-container">
+                    <h4 class="lighting-title">Quote of the day</h4>
+                    <div class="quote-generator">
+                        <p id="quote">
+                            Lorem ipsum dolor, sit amet consectetur adipiscicing elit. Voluptas, magni.
+                        </p>
+                        <p class="comment-name" id="author">Lorem, ipsum</p>
+                        <button onclick="getQuote(api_url)" id="btn">New Quote</button>
+
+                    </div>
+                    
                 </div>
+                <div>
+                    <img src="./images/pottedplant.jpg" class="potted-plant" alt="a woman holding a potted plant" />
+                </div>
+            </section>
+
+            <section class="divider"></section>
+
+            <section class="image-contact-form">
+            
                 <div class="contact-form" id="contact">
                     <h4 class="contact-title">Contact us:</h4>
-                    <p class="contact-message">If you have any questions about our services, please fill out the form below.</p>
+                    <p class="contact-message">If you have any questions about our services, please enter your email below.</p>
                     
                     <form name="contact-us" action="" method="POST" novalidate>
 
                         <div id="errors" aria-live="assertive" tabindex="-1">
                         </div>
-                        
-                        <div class="form-group">
-                            <label class="form__label" for="name">Your name (required):</label>
-                            <input class="form__text" id="name" type="text" name="name" required>
-                            <p class="error name-error"></p>
-                        </div>
 
                         <div class="form-group">
                             <label class="form__label" for="email">Your email (required):</label>
-                            <input class="form__text" id="email" type="email" name="email" required>
+                            <input class="form__text" id="email" type="email" name="email" required oninput="checker()"> 
                             <p class="error email-error"></p>
-                        </div>
-    
-                        <div class="form-group">
-                            <label class="form__label" for="message">Your message (required):</label>
-                            <textarea class="form__text" id="message" name="message" required></textarea>
-                            <p class="error message-error"></p>
+                            <p id="error-msg">Please enter a valid email.</p>
+                            <p id="valid-msg">Valid email.</p>
                         </div>
 
                         <button class="submit-button">Submit</button>
@@ -253,6 +263,7 @@
                 </ul>
             </section>
         </footer>
+        
         <script src="script.js"></script>
     </body>
 </html>

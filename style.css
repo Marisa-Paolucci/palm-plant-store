@@ -433,6 +433,52 @@ input:focus {
     border-color: #af4242;
 }
 
+/*Quote Generator*/
+.quotes {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1em;
+    background-color: var(--clr-accent);
+}
+
+.quote-container {
+    text-align: center;
+}
+
+.quote-generator {
+    width: 100%;
+    background-color: #36453b;
+    padding: 50px 40px;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+#btn {
+    display: inline-block;
+    background: #fff;
+    padding: 1em 2em;
+    font-family: var(--clr-text);
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: .12rem; 
+    color:#36453b;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background: #daa520;
+}
+
+.potted-plant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
 
 /*Contact Form*/
 
@@ -466,6 +512,22 @@ input:focus {
     margin: .25em 0 2em;
 }
 
+#error-msg {
+    color: #b13b2c;
+    background-color: #feeff1;
+    padding: .625em;
+    display: none;
+
+}
+
+#valid-msg {
+    color: #024d1b;
+    background-color: #d7e7bf;
+    padding: .625em;
+    display: none;
+
+}
+
 .submit-button {
     cursor: pointer;
     display: inline-block;
@@ -479,11 +541,11 @@ input:focus {
 }
 
 .submit-button:hover {
-    background: #af4242;
+    background: #daa520;
 }
 
 .submit-button:focus-visible {
-    outline-color: #af4242;
+    outline-color: #daa520;
     outline-width: 2em;
 }
 
@@ -627,6 +689,18 @@ textarea {
         margin: 7em 0 7em 0;
     }
 
+    .quotes {
+        flex-direction: row;
+    }
+
+    .quote-container {
+        padding: 3em;
+    }
+
+    .potted-plant {
+        margin: 7em 0 7em 0;
+    }
+
     .contact-form {
         padding: 4em;
     }
@@ -635,7 +709,6 @@ textarea {
         flex-direction: row;
     }
 }
-
 
 
 @media screen and (min-width: 1025px) {
@@ -680,6 +753,14 @@ textarea {
 }
 
     .lighting-info {
+        padding: 3em;
+        margin: 3em 10em 0 6em;
+        flex: 0 1 50%;
+        font-size: 1.3rem;
+}
+
+
+    .quote-container {
         padding: 3em;
         margin: 3em 10em 0 6em;
         flex: 0 1 50%;

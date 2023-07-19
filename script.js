@@ -81,6 +81,50 @@ inputs.forEach(input => {
    })
 });
 
+//Quote Generator API
+
+const quote = document.getElementById("quote");
+const author = document.getElementById("author");
+const api_url = "https://api.quotable.io/random";
+
+async function getQuote(url){
+   const response = await fetch(url);
+   var data = await response.json();
+   quote.innerHTML = data.content;
+   author.innerHTML = data.author;
+}
+
+getQuote(api_url);
+
+//Email Validation
+
+let emailId = document.getElementById("email");
+let errorMsg = document.getElementById("error-msg");
+let validMsg = document.getElementById("valid-msg");
+let mailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+function checker(){
+   if(emailId.value.match(mailRegex)){
+      errorMsg.style.display = 'none';
+      validMsg.style.display = 'block';
+      emailId.style.border = '2px solid #2ecc71'
+   }
+
+   else if(emailId.value == ""){
+      errorMsg.style.display = 'none';
+      emailId.style.border = '2px solid #d1d3d4';
+   }
+
+   else{
+      errorMsg.style.display = 'block';
+      validMsg.style.display = 'none';
+      emailId.style.border = '2px solid #ff2851';
+   }
+
+
+}
+
+
 //Contact Form Error Messages
 
 function showError(errorElement, errorMessage){
@@ -99,19 +143,9 @@ let form = document.forms['contact-us'];
 form.onsubmit = function(event){
 
    clearError();
-   
-   if(form.name.value === ""){
-      showError("name-error", "Please enter your name");
-      return false;
-   }
 
    if(form.email.value === ""){
       showError("email-error", "Please enter your email");
-      return false;
-   }
-
-   if(form.message.value === ""){
-      showError("message-error", "Please enter a message");
       return false;
    }
 
